@@ -1,0 +1,21 @@
+
+{{> header}}
+
+        <H1>
+            [Admin] Contact Us ! 
+        </H1>
+
+
+        <div class="container">
+            <div class="row">
+                {{#each contact}}
+                    <div class="col-4">
+                        <p><b>Customer Name: </b>{{this.UserName}}</p>
+                        <p><b>Customer Email: </b>{{this.Email}}</p>
+                        <p><b>Customer Phone Number: </b>{{this.PhoneNumber}}</p>
+                        <p><b>Messages: </b>{{this.Messages}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+{{> footer}}

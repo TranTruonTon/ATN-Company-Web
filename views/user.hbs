@@ -1,0 +1,19 @@
+
+        <H1>
+            [Admin] User Management ! 
+        </H1>
+
+
+        <div class="container">
+            <div class="row">
+                {{#each user}}
+                    <div class="col-4">
+                        <p><b>UserName: </b>{{this.UserName}}</p>
+                        <p><b>Password: </b>{{this.Password}}</p>
+                        <p><b>Full Name: </b>{{this.FullName}}</p>
+                        <p><b>Email: </b>{{this.Email}}</p>
+                        <p><b>Phone Number: </b>{{this.PhoneNumber}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
