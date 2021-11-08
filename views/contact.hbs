@@ -1,21 +1,31 @@
-
-{{> header}}
-
-        <H1>
+        <H1 class="btn-success">
             [Admin] Contact Us ! 
         </H1>
 
 
         <div class="container">
+
             <div class="row">
-                {{#each contact}}
-                    <div class="col-4">
-                        <p><b>Customer Name: </b>{{this.UserName}}</p>
-                        <p><b>Customer Email: </b>{{this.Email}}</p>
-                        <p><b>Customer Phone Number: </b>{{this.PhoneNumber}}</p>
-                        <p><b>Messages: </b>{{this.Messages}}</p>
-                    </div>
-                {{/each}}
-            </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col"><b>#</b></th>
+                            <th scope="col"><b>Customer Name</b></th>
+                            <th scope="col"><b>Customer Email</b></th>
+                            <th scope="col"><b>Customer Phone Number</b></th>
+                            <th scope="col"><b>Messages</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each contact}}
+                            <tr>
+                            <th scope="row"> {{@key}}</th>
+                            <td>>{{this.FullName}}</td>
+                            <td>{{this.Email}}</td>
+                            <td>{{this.PhoneNumber}}</td>
+                            <td>{{this.Messages}}</td>                            
+                            {{/each}}
+                        </tbody>
+                    </table>
+            </div>            
         </div>
-{{> footer}}
